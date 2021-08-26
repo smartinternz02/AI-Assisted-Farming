@@ -16,7 +16,27 @@ import random
 import csv
 import requests
 import matplotlib.pyplot as plt
-from time import sleep
+
+@extend_schema(
+        examples=[
+                    OpenApiExample(
+                        name='health',
+                        value='{ \"status\": \"UP\" }'
+                    ),
+                ],
+        description='Get health of application',
+        responses=OpenApiTypes.OBJECT, 
+     ) 
+@api_view(['GET'])
+def health(request):
+    state = {"status": "UP"}
+    return JsonResponse(state)
+def handler404(request):
+    return render(request, '404.html', status=404)
+def handler500(request):
+    return render(request, '500.html', status=500)
+
+
 
 API_KEY = "hZYCe5CcFdL6-9Sjpps65riWv2ZXIyxZyDPqyKlaS02t"
 token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey": API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
