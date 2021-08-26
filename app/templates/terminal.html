@@ -1,0 +1,25 @@
+{% extends 'basesign.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/terminal.css' %}">
+<h3 style="text-align: center;">Crop Sense Device Values</h3>
+<div class="full">
+<div class="half">
+    <p class="info">Nitrogen</p>
+    <img class="graph" src="{% static 'images/n.jpg' %}">
+    <p>Phophorous</p>
+    <img class="graph" src="{% static 'images/p.jpg' %}">
+    <p>Potassium</p>
+    <img class="graph" src="{% static 'images/k.jpg' %}">
+</div>
+<div class="half2">
+    <p>pH</p>
+    <img class="graph" src="{% static 'images/ph.jpg' %}">
+    <p>Humidity</p>
+    <img class="graph" src="{% static 'images/humidity.jpg' %}">
+    <p>Temperature</p>
+    <img class="graph"  src="{% static 'images/temp.jpg' %}">
+</div>
+</div>
+{% endblock %}

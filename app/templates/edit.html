@@ -1,0 +1,15 @@
+{% extends 'basesign.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+<h1 class="f">Edit Form</h1>
+<form class="f" method="POST">
+    {% csrf_token %}
+    {{ forms.as_p }}  
+    <button class="signupbutton lin" type="submit">Edit</button>
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+</form>
+{% endblock %}

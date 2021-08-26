@@ -1,0 +1,47 @@
+.half{
+    float:left;
+    width:60%;
+}
+.half2{
+    float:left;
+    width:40%;
+}
+.info{
+    font-size: 15px;
+    margin-left:20px;
+}
+.head{
+    margin-left:20px;
+}
+.head2{
+    margin-left:20px;
+    margin-top:40px;
+}
+.signupbutton{
+    background-color: rgb(156, 0, 130); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left:50px;
+}
+.lin{
+    color: white;
+    text-decoration: none;
+}
+@media(max-width:743px){
+    body{
+        font-size: 15px;
+    }
+    .half{
+        width:100%;
+    }
+    .half2{
+        width: 100%;
+    }
+}

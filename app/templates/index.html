@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+<div class="photo">
+    <img class="seedimg" src="{% static 'images/crop1.jpg' %}">
+</div>
+<p class="head">Farming Done Easy</p>
+<p class="text">Modernise Farming with IOT,ML and IBM Solutions.</p>
+<p class="text">
+    <button class="but">
+        <a href="{% url 'signin' %}" class="link">Get Started</a>
+    </button>
+</p>    
+{% endblock %}

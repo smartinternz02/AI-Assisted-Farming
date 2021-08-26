@@ -1,0 +1,27 @@
+{% extends 'basesign.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+<div class="half">
+    <h2 class="head">Hello {{nam}}</h2>
+    <p class="info">To Predict optimal crop to plant, click on Predict Tab</p>
+    <p class="info">To Check NPK and other soil parameters, click on Terminal Tab</p>
+    <p class="info">To edit details and Log Out, click on Account Tab</p>
+    <h3 class="head2">Crops in Your Village</h3>
+    <p class="info">People growing crops and their soil parameters</p>
+    {% for name,crop,n,p,k,ph in total %}
+    <hr class="info" style="width:300px;">
+    <p class="info">Name: {{name}}</p>
+    <p class="info">Crop: {{crop}}</p>
+    <p class="info"> Parameters: N:{{n}} | P:{{p}} | K:{{k}} | pH:{{ph}}</p>
+    <hr class="info" style="width:300px;">
+    {% endfor %}
+</div>
+<div class="half2">
+    <h3>Weather at {{district}}</h3>
+    <p class="info">Temperature: {{temp}} C</p>
+    <p class="info">Humidity: {{humidity}}% </p>
+    <p class="info">Rain Possibility: {{rain}}%</p>
+</div>
+{% endblock %}

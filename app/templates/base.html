@@ -1,0 +1,61 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block title %}
+    {% endblock %}
+    <meta charset="utf-8">
+    <meta name= "viewport" content="initial-scale=1" width="device-width">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="icon" href="{% static 'images/crop1.jpg' %}">
+    <title>Crop Speak</title>
+    <meta property="og:image" content="{% static 'images/crop1.jpg' %}">
+    <meta property="og:title" content="Crop Speak">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="640">
+    <meta property="og:image:height" content="480">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://python-django-cloudfoundry-demo.eu-gb.mybluemix.net/">
+    <meta property="og:description" content="Farm Easy with IBM Cloud">
+    <meta name="author" content="Rohit D">
+    
+</head>
+<body>
+    <div class="navbar">
+        <div class="crop">
+            <a href="/" class="link">
+                Crop Speak
+            </a>
+        </div>
+        <div class="nav">
+            <a href="{% url 'signin' %}" class="link">
+                Home
+            </a>
+        </div>
+        <div class="nav">
+            <a href="{% url 'signin' %}" class="link">
+                Terminal
+            </a>
+        </div>
+        <div class="nav">
+            <a href="{% url 'signin' %}" class="link">
+                Predict
+            </a>
+        </div>
+        <div class="nav">
+            <a href="{% url 'signin' %}" class="link">
+                Sign In
+            </a>
+        </div>
+    </div>
+    <div class="mainbody">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer"> 
+        <a target="_blank" class="linkedinname" href="https://www.linkedin.com/in/rohit-d-898384211/">
+        Designed by Rohit D <img class="linkedin" src="{% static 'images/linkedin.png' %}">
+        </a>
+    </div>
+</body>
+</html>

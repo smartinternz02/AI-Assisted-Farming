@@ -1,0 +1,33 @@
+{% extends 'basesign.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/predict.css' %}">
+<div class="half">
+    <h3 class="head">Predict with Values:</h3>
+    <hr class="info" style="width:300px;">
+    <p class="info">Parameters: </p>
+    <p class="info">N : {{n}} | P : {{p}} | K : {{k}} | ph : {{ph}}</p>
+    <p class="info">Rainfall : {{rainfall}} mm</p>
+    <p class="info">Temperature: {{temp}} C</p>
+    <p class="info">Humidity: {{humidity}}%</p>
+    <form class="info" method="POST">
+        {% csrf_token %}
+        <button class="signupbutton lin" value="Pred" name="_pred" type="submit">Predict</button>
+        <p> The Optimal Crop is: {{pred}}</p>
+    </form>
+</div>
+<div class="half2">
+    <h3>Find Revenue for Crops</h3>
+    <form class="info" method="POST">
+        {% csrf_token %}
+        {{ forms.as_p }}
+        <button class="signupbutton lin" type="submit">Calculate</button>  
+        <p>Cost of Cultivation: {{a}}/hectare</p>
+        <p>Cost of Production: {{b}}/Quintal</p>
+        <p>Yield(Quintal/Hectare): {{c}} </p>
+        <p>Support Price: {{d}}</p>
+        <p></p>
+    </form>
+</div>
+{% endblock %}
