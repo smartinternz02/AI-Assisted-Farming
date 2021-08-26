@@ -1,3 +1,6 @@
+body{
+    font-size: 25px;
+}
 .half{
     float:left;
     width:60%;
@@ -7,7 +10,7 @@
     width:40%;
 }
 .info{
-    font-size: 15px;
+    font-size: 20px;
     margin-left:50px;
 }
 .head{
