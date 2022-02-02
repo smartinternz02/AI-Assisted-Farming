@@ -272,8 +272,10 @@ def predict(request):
                     field_values.append(doc["ph"])
                     field_values.append(doc["rainfall"])
             payload_scoring = {"input_data": [{"fields":[fields], "values":[field_values]}]}
-            #response_scoring = requests.post(link, json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
-            list1["pred"]="Rice"
+            response_scoring = requests.post(link, json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
+            predxyz = response_scoring.json()
+            list1["pred"] = str(predxyz["predictions"][0]['values'][0][0])
+            #list1["pred"]="Rice"
             list1["forms"]=rev()
             return render(request,'predict.html',list1)
     else:    

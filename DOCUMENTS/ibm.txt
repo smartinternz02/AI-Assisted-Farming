@@ -1,0 +1,71 @@
+GOOD AFTERNOON
+i am rohit from ssn,chennai
+here to present my solution for ai assisted farming challenge
+
+PURPOSE
+To build an application that can be used by farmers throughout India to get 
+accurate information on which crops to be planted. 
+By using various IBM services, we can help farmers get the best yield and 
+revenue from their hard-work and land. Reduce the risk of farming and bring 
+it to industry 4.0 standards
+
+SOLUTION
+Automate Crop harvesting and Plantation using ML Models which can give 
+accurate timings for these tasks.
+Give Information on Revenue and Cost of Production for crops to farmers 
+using the Dataset.
+Real-Time Predictive Analysis is the next big thing in the IOT Sphere. Farmers
+can collect the data and determine the optimal use of fertilizers, 
+irrigation and plantation systems. They can take action in real time with IOT 
+Solutions.
+
+NOVELTY
+In India, villages are small and the people are a tight knit community. 
+Thus a solution has to be designed which can be used by the society as 
+a whole. The solution should involve the community as a whole instead of 
+individual farmers. The IOT Solutions can be integrated for each and every 
+farmer in the community so that there is a collective upbringing of farmers 
+and development to the community.
+The solution is to integrate the sensor values of the IOT devices of all users
+in the community and let the users in the community see the crops grown in 
+their community. This way, users get a better idea of what crops to grow and 
+how much fertilizer/manure has to be added by comparing their yield with 
+their neighbors.
+
+This IOT Device requires constant internet connection to be able to provide 
+real time analysis. This might not be possible until villages in India have 
+constant power and internet connection. This device can also be costly for
+farmers who do not have enough land.
+Thus, adding a backdoor where farmers can manually enter Soil parameters after getting
+the soil tested in a nearby government soil testing facility would be a good 
+feature. Thus, in the account tab in the website, farmers can manually enter 
+the Soil and Climate Parameters.
+
+PROBLEMS
+As Watson Studio only allows Lite users to use up to 20 capacity unit hours of CPU time
+per month, I had already exhausted the CUH in the first 3 days of testing 
+and building the project. Thus I now have to improvise and output random crop 
+samples in the web app as the Deployed Space does not run the model.
+
+Watson IOT Platform Requires Cloud Foundry Deployment Space to transmit the
+simulated sensor values to the Cloud. As Cloud Foundry is not Available to 
+Lite Users.
+Thus, random numbers were generated in python script to simulate the IOT 
+Sensor Values. As Cloud Foundry was also not working, I had to use django 
+instead of Node Red to launch the website.
+
+
+FUTURE SCOPE
+Apart from the Crop Sense Device, the IOT Sphere can be improved vastly. 
+Solutions such as
+Automated Manure/Fertilizer Dispenser using Sprinklers as Hardware when the soil
+nutrient levels are low.
+Pest/Disease Detection using Cameras and Surveillance systems for crops so 
+that farmers can be alerted on the presence of rodents/pests on their farms. 
+This way, the damage caused by pests/diseases can be prevented before it 
+happens.
+
+THANK YOU
+This hackathon was a wonderful experience and i learnt a lot and got guidance 
+from having one on one doubt clearing with mentors.
+thank you for giving me this oppurtunity to present.

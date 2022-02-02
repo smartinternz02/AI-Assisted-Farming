@@ -4,12 +4,16 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/account.css' %}">
 <h1 class="f">Details</h1>
-<div class="f">
+<div class="half">
     <p>Name: {{name}}</p>
     <p>Mail: {{mail}}</p>
     <p>District: {{district}}</p>
     <p>State: {{state}}</p>
     <p>Crop Sense ID: {{sense}}</p>
+    <button class="signupbutton"><a class="lin" href="{% url 'edit' %}">Edit</a></button>
+    <button class="signupbutton"><a class="lin" href="{% url 'logout' %}">Log Out</a></button>
+</div>
+<div class="half2">
     <p>If you do not have Crop Sense Devices, Enter these values manually</p>
     <p>Crop Grown: {{crop}}</p>
     <p>Nitrogen Value: {{n}}</p>
@@ -18,8 +22,5 @@
     <p>pH Value: {{ph}}</p>
     <p>Rainfall in mm: {{rainfall}}</p>
     <p>Land in Hectares: {{land}}</p>
-    <button class="signupbutton"><a class="lin" href="{% url 'edit' %}">Edit</a></button>
-    <button class="signupbutton"><a class="lin" href="{% url 'logout' %}">Log Out</a></button>
 </div>
 {% endblock %}
-
